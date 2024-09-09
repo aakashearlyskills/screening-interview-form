@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Early Skills Resume Builder</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-12 mb-4">
+                <div class="form-section" id="ContainerSuccess" style="display: none;">
+
+                </div>
+                <div class="form-section" id="ContainerRegistrationForm">
+                    <!-- <h2>Early Skills Screening Interview Form</h2> -->
+                    <div class="form-group p-2 mb-2 bannerMainDiv">
+                        <div class="row bannerDiv">
+                            <div class="col-lg-7 col-sm-9 col-md-8 mt-2">
+                                <h1 class="mb-1">Early Skills Screening Interview Form</h1>
+                                <p class="mb-0">
+                                    <i class="fa fa-map-marker"></i> A-41, 5th Floor, Tower C, The Iconic Corenthum
+                                    Building, Sector 62, Noida Uttar Pradesh - 201301
+                                </p>
+                                <p class="mb-0">
+                                    <i class="fa fa-globe"></i> <a
+                                        href="https://earlyskillsapp.com/">www.earlyskillsapp.com</a>
+                                </p>
+                                <p class="mb-0">
+                                    <i class="fa fa-phone"></i> <a href="tel:+919319316736">+919319316736</a>
+                                </p>
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-sm-3 d-flex justify-content-end">
+                                <img class="d-none d-md-block" src="earlyskills.jpg" alt="Image Logo">
+                            </div>
+                        </div>
+                    </div>
+                    <form id="resumeForm">
+                        <div class="form-group">
+                            <div class="form-group detail-div">Personal Details</div>
+                            <div class="row">
+                                <div class="col-lg-3 col-md-6 col-12 mt-2">
+                                    <label for="name">Name <span class="text-danger">*</span></label>
+                                    <input type="text" class="form-control" id="name" name="Name"
+                                        placeholder="Your Name" required />
+                                </div>
+                                <div class="col-lg-3 col-md-6 col-12 mt-2">
+                                    <label for="email">Email <span class="text-danger">*</span></label>
+                                    <input type="email" class="form-control" id="email" name="E Mail"
+                                        placeholder="email@example.com" required />
+                                </div>
+                                <div class="col-lg-3 col-md-6 col-12 mt-2">
+                                    <label for="phone">Phone <span class="text-danger">*</span></label>
+                                    <input type="text" class="form-control" id="phone" name="Contact No"
+                                        placeholder="+91 XXXXXXXXXX" required />
+                                </div>
+                                <div class="col-lg-3 col-md-6 col-12 mt-2">
+                                    <label for="gender">Gender <span class="text-danger">*</span></label>
+                                    <select id="gender" class="form-select" name="Gender" required="">
+                                        <option selected disabled value>
+                                            Select your gender
+                                        </option>
+                                        <option value="Male">Male</option>
+                                        <option value="Female">Female</option>
+                                        <option value="Other">Other</option>
+                                    </select>
+                                </div>
+                                <div class="col-lg-3 col-md-6 col-12 mt-2">
+                                    <label for="maritalStatus">Marital Status <span class="text-danger">*</span></label>
+                                    <select id="maritalStatus" name="Maritial Status" class="form-select" required="">
+                                        <option selected disabled value>
+                                            Select Marital Status
+                                        </option>
+                                        <option value="Single">Single</option>
+                                        <option value="Married">Married</option>
+                                        <option value="Widowed">Widowed</option>
+                                        <option value="Divorced">Divorced</option>
+                                    </select>
+                                </div>
+                                <div class="col-lg-3 col-md-6 col-12 mt-2">
+                                    <label for="DOB">Date Of Birth <span class="text-danger">*</span></label>
+                                    <input type="date" name="Date Of Birth" id="dob" class="form-control" required />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group detail-div mt-4">Address Details</div>
+                        <div class="row">
+                            <div class="col-lg-3 col-md-6 col-12 mt-2">
+                                <label for="country">Country <span class="text-danger">*</span></label>
+                                <select id="country" name="Country" class="form-select" required="">
+                                    <option value="India">India</option>
+                                </select>
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-12 mt-2">
+                                <label for="state">State <span class="text-danger">*</span></label>
+                                <select name="State" id="state" class="form-control" required="">
+                                    <option value selected disabled>--Select--</option>
+                                    <option value="Andhra Pradesh">Andhra Pradesh</option>
+                                    <option value="Andaman and Nicobar Islands">
+                                        Andaman and Nicobar Islands
+                                    </option>
+                                    <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                                    <option value="Assam">Assam</option>
+                                    <option value="Bihar">Bihar</option>
+                                    <option value="Chandigarh">Chandigarh</option>
+                                    <option value="Chhattisgarh">Chhattisgarh</option>
+                                    <option value="Dadar and Nagar Haveli">
+                                        Dadar and Nagar Haveli
+                                    </option>
+                                    <option value="Daman and Diu">Daman and Diu</option>
+                                    <option value="Delhi">Delhi</option>
+                                    <option value="Lakshadweep">Lakshadweep</option>
+                                    <option value="Puducherry">Puducherry</option>
+                                    <option value="Goa">Goa</option>
+                                    <option value="Gujarat">Gujarat</option>
+                                    <option value="Haryana">Haryana</option>
+                                    <option value="Himachal Pradesh">Himachal Pradesh</option>
+                                    <option value="Jammu and Kashmir">Jammu and Kashmir</option>
+                                    <option value="Jharkhand">Jharkhand</option>
+                                    <option value="Karnataka">Karnataka</option>
+                                    <option value="Kerala">Kerala</option>
+                                    <option value="Madhya Pradesh">Madhya Pradesh</option>
+                                    <option value="Maharashtra">Maharashtra</option>
+                                    <option value="Manipur">Manipur</option>
+                                    <option value="Meghalaya">Meghalaya</option>
+                                    <option value="Mizoram">Mizoram</option>
+                                    <option value="Nagaland">Nagaland</option>
+                                    <option value="Odisha">Odisha</option>
+                                    <option value="Punjab">Punjab</option>
+                                    <option value="Rajasthan">Rajasthan</option>
+                                    <option value="Sikkim">Sikkim</option>
+                                    <option value="Tamil Nadu">Tamil Nadu</option>
+                                    <option value="Telangana">Telangana</option>
+                                    <option value="Tripura">Tripura</option>
+                                    <option value="Uttar Pradesh">Uttar Pradesh</option>
+                                    <option value="Uttarakhand">Uttarakhand</option>
+                                    <option value="West Bengal">West Bengal</option>
+                                </select>
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-12 mt-2">
+                                <label for="City">City <span class="text-danger">*</span></label>
+                                <input type="text" name="City" id="city" placeholder="Enter Your City Name"
+                                    class="form-control" required />
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-12 mt-2">
+                                <label for="Prefrred City1">Prefrred City 1 <span class="text-danger">*</span></label>
+                                <input type="text" name="Preferred City 1" id="preferredCity1"
+                                    placeholder="Enter First Prefrred City" class="form-control" required />
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-12 mt-2">
+                                <label for="Prefrred City2">Prefrred City 2 <span class="text-danger">*</span></label>
+                                <input type="text" name="Preferred City 2" id="preferredCity2"
+                                    placeholder="Enter Second Prefrred City" class="form-control" required />
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-12 mt-2">
+                                <label for="Relocate">Willing To Relocate In City District
+                                    <span class="text-danger">*</span></label>
+                                <select id="relocate" name="Willing to relocate with in the distric ( Yes / No )"
+                                    class="form-select" required="">
+                                    <option value="Yes">Yes</option>
+                                    <option value="No">No</option>
+                                </select>
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-12 mt-2">
+                                <label for="Relocate">Region
+                                    <span class="text-danger">*</span></label>
+                                <select id="relocate" name="Region (East / West / North / South)" class="form-select"
+                                    required="">
+                                    <option value="" disabled selected>Select Region</option>
+                                    <option value="East">East</option>
+                                    <option value="West">West</option>
+                                    <option value="North">North</option>
+                                    <option value="South">South</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group detail-div mt-4">Educational Details</div>
+                        <div class="row">
+                            <!-- 10th details  -->
+                            <div class="form-group">
+                                <h6 class="mt-2 group-heading">Class 10th Details</h6>
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-12">
+                                <label for="10thBoard">10th Board <span class="text-danger">*</span></label>
+                                <input type="text" class="form-control" id="board10th" name="10th Board"
+                                    placeholder="Enter 10th Board Name" required />
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-12 mt-2">
+                                <label for="10thPassingYear">10th Passing Year <span
+                                        class="text-danger">*</span></label>
+                                <select name="10th Year of Passing" id="year10th" class="form-control" required="">
+                                    <option selected disabled value>Select Year</option>
+                                    <!-- Year is shown here -->
+                                </select>
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-12 mt-2">
+                                <label for="10thPercentage">10th Board Percentage
+                                    <span class="text-danger">*</span></label>
+                                <input type="number" class="form-control" id="percentage10th" name="10th Percentage"
+                                    placeholder="Enter 10th Board Percentage" required />
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-12 mt-2">
+                                <label for="10thCourseStatus">10th Board Course Status
+                                    <span class="text-danger">*</span></label>
+                                <select id="10thCourseStatus" name="10th Course Status (Pass / Fail)"
+                                    class="form-select" required="">
+                                    <option selected disabled value>
+                                        Select Course Status
+                                    </option>
+                                    <option value="Pass">Pass</option>
+                                    <option value="Fail">Fail</option>
+                                </select>
+                            </div>
+
+                            <!-- 12th details  -->
+                            <div class="form-group">
+                                <h6 class="mt-2 group-heading">Class 12th Details</h6>
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-12">
+                                <label for="12thBoard">12th Board <span class="text-danger">*</span></label>
+                                <input type="text" class="form-control" id="board12th" name="12th Board"
+                                    placeholder="Enter 12th Board Name" required />
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-12 mt-2">
+                                <label for="12thPassingYear">12th Passing Year <span
+                                        class="text-danger">*</span></label>
+                                <select name="12th Year of Passing" id="year12th" class="form-control" required="">
+                                    <option selected disabled value>Select Year</option>
+                                    <!-- Year is shown here -->
+                                </select>
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-12 mt-2">
+                                <label for="12thPercentage">12th Board Percentage
+                                    <span class="text-danger">*</span></label>
+                                <input type="number" class="form-control" id="percentage12th" name="12th Percentage"
+                                    placeholder="Enter 12th Board Percentage" required />
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-12 mt-2">
+                                <label for="12thCourseStatus">12th Board Course Status
+                                    <span class="text-danger">*</span></label>
+                                <select id="12thCourseStatus" name="12th Course Status (Pass / Fail)"
+                                    class="form-select" required="">
+                                    <option selected disabled value>
+                                        Select Course Status
+                                    </option>
+                                    <option value="Pass">Pass</option>
+                                    <option value="Fail">Fail</option>
+                                </select>
+                            </div>
+
+                            <!-- graduation details  -->
+                            <div class="form-group">
+                                <h6 class="mt-2 group-heading">Graduation Details</h6>
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-12 mt-2">
+                                <label for="graduationdegree">Graduation Degree Name
+                                    <span class="text-danger">*</span></label>
+                                <input type="text" class="form-control" id="graduationdegree" name="Graduation Degree"
+                                    placeholder="Enter Graduation Degree Name" required />
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-12 mt-2">
+                                <label for="UniversityName">University Name <span class="text-danger">*</span></label>
+                                <input type="text" class="form-control" id="university_name" name="University"
+                                    placeholder="Enter Graduation University Name" required />
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-12 mt-2">
+                                <label for="UniversityPercentage">Percentage <span class="text-danger">*</span></label>
+                                <input type="text" class="form-control" id="universityPercentage" name="Percentage"
+                                    placeholder="Enter Graduation Percentage" required />
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-12 mt-2">
+                                <label for="graduationYear">Graduation Passing Year
+                                    <span class="text-danger">*</span></label>
+                                <select name="Year Of Passing" id="yeargraduation" class="form-control" required="">
+                                    <option selected disabled value>Select Year</option>
+                                    <!-- Year is shown here -->
+                                </select>
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-12 mt-2">
+                                <label for="graduationCourseStatus">Graduation Course Status
+                                    <span class="text-danger">*</span></label>
+                                <select id="graduationCourseStatus" name="Graduation Course Status ( Pass / fail )"
+                                    class="form-select" required="">
+                                    <option selected disabled value>
+                                        Select Course Status
+                                    </option>
+                                    <option value="Pass">Pass</option>
+                                    <option value="Fail">Fail</option>
+                                </select>
+                            </div>
+                        </div>
+                        <!-- Post Graduation details  -->
+                        <div class="col-lg-12 col-md-12 col-12 bg collapseDiv mb-2 mt-3" data-bs-toggle="collapse"
+                            href="#postGraduation" aria-expanded="false" aria-controls="postGraduation">
+                            Post Graduation (Fill If Completed/Pursuing) <i class="fa fa-plus"></i>
+                        </div>
+                        <div class="collapse multi-collapse" id="postGraduation">
+                            <div class="row">
+                                <div class="form-group">
+                                    <h6 class="mt-2 group-heading">Post Graduation Details</h6>
+                                </div>
+                                <div class="col-lg-3 col-md-6 col-12 mt-2">
+                                    <label for="Postgraduationdegree">Degree Name
+                                    </label>
+                                    <input type="text" class="form-control" id="postGraduationDegree"
+                                        name="Post Graduation Degree (NA if not done)"
+                                        placeholder="Enter Graduation Degree Name" />
+                                </div>
+                                <div class="col-lg-3 col-md-6 col-12 mt-2">
+                                    <label for="PostUniversityName">University Name</label>
+                                    <input type="text" class="form-control" id="postUniversityName"
+                                        name="Post Graduation University" placeholder="Enter University Name" />
+                                </div>
+                                <div class="col-lg-3 col-md-6 col-12 mt-2">
+                                    <label for="PostUniversityPercentage">Percentage</label>
+                                    <input type="number" class="form-control" id="PostUniversityPercentage"
+                                        name="Post Graduation Percentage" placeholder="Enter Graduation Percentage" />
+                                </div>
+                                <div class="col-lg-3 col-md-6 col-12 mt-2">
+                                    <label for="graduationCourseStatus">Course Status
+                                    </label>
+                                    <select id="graduationCourseStatus"
+                                        name="Post Graduation Course Status (Pass / Fail /Pursuing)"
+                                        class="form-select">
+                                        <option selected disabled value>
+                                            Select Course Status
+                                        </option>
+                                        <option value="Pursuing">Pursuing</option>
+                                        <option value="Pass">Pass</option>
+                                        <option value="Fail">Fail</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group detail-div mt-4">
+                            Work Experience Details
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-3 col-md-6 col-12 mt-2">
+                                <label for="salesExperience">Sales / Customer experience
+                                    <span class="text-danger">*</span></label>
+                                <select id="salesExperience" name="Sales / Customer experience (Yes / No)"
+                                    class="form-select" required="">
+                                    <option selected disabled value>Select Option</option>
+                                    <option value="Yes">Yes</option>
+                                    <option value="No">No</option>
+                                </select>
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-12 mt-2">
+                                <label for="workExperience">Work Experience <span class="text-danger">*</span></label>
+                                <select id="workExperience" name="Work Experience (in yrs)" class="form-select"
+                                    required="">
+                                    <option selected disabled value>Select Option</option>
+                                    <option value="0-12 Months">0-12 Months</option>
+                                    <option value="12-24 Months">12-24 Months</option>
+                                    <option value="24 Months +">24 Months +</option>
+                                    <option value="Fresher">Fresher</option>
+                                </select>
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-12 mt-2">
+                                <label for="workExperience">Work Starting Month
+                                    <span class="text-danger"></span></label>
+                                <select name="From Month" id="workStartMonth" class="form-control">
+                                    <option value="" selected disabled>Select Month</option>
+                                    <!-- Month will show here  -->
+                                </select>
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-12 mt-2">
+                                <label for="workStartYear">Work Starting Year
+                                    <span class="text-danger"></span></label>
+                                <select name="From Year" id="WorkFromYear" class="form-control">
+                                    <option selected disabled value>Select Year</option>
+                                    <!-- Year is shown here -->
+                                </select>
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-12 mt-2">
+                                <label for="workEndMonth">Work Ending Month
+                                    <span class="text-danger"></span></label>
+                                <select name="To Month" id="workEndMonth" class="form-control">
+                                    <option value="" selected disabled>Select Month</option>
+                                    <option value="Currently Working">Currently Working</option>
+                                    <!-- Month will show here  -->
+                                </select>
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-12 mt-2">
+                                <label for="WorkEndYear">Work Ending Year
+                                    <span class="text-danger"></span></label>
+                                <select name="To Year" id="WorkToYear" class="form-control">
+                                    <option selected disabled value>Select Year</option>
+                                    <option value="Currently Working">Currently Working</option>
+                                    <!-- Year is shown here -->
+                                </select>
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-12 mt-2">
+                                <label for="organizationName">Organization/Company Name <span
+                                        class="text-danger"></span></label>
+                                <input type="text" name="Name of Organization" id="organizationName"
+                                    placeholder="Enter Previous Organization/Company" class="form-control" />
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-12 mt-2">
+                                <label for="Location">Location <span class="text-danger"></span></label>
+                                <input type="text" name="Location" id="location" placeholder="Enter Company Location"
+                                    class="form-control" />
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-12 mt-2">
+                                <label for="PerMonthGrossSalary">Gross Salary Per Month<span
+                                        class="text-danger"></span></label>
+                                <input type="number" name="Gross Salary (per month)" id="perMonthSalary"
+                                    placeholder="Enter Gross Salary Per Month" class="form-control" />
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-12 mt-2">
+                                <label for="PerYearGrossSalary">Gross Salary Per Year<span
+                                        class="text-danger"></span></label>
+                                <input type="number" name="Gross Salary Drawn (pa)" id="perYearSalary"
+                                    placeholder="Enter Gross Salary Per Year" class="form-control" />
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-12 mt-2">
+                                <label for="Designation">Designation <span class="text-danger"></span></label>
+                                <input type="text" name="Designation" id="designation"
+                                    placeholder="Enter Your Designation" class="form-control" />
+                            </div>
+                        </div>
+                        <div class="form-group detail-div mt-4">Other Details</div>
+                        <div class="row">
+                            <div class="col-lg-3 col-md-6 col-12 mt-2">
+                                <label for="twoWheeler">Do You Have 2-Wheeler
+                                    <span class="text-danger">*</span></label>
+                                <select id="twoWheeler" name="Do you have a two 2-wheeler of your own"
+                                    class="form-select" required="">
+                                    <option selected disabled value>Select Option</option>
+                                    <option value="Yes">Yes</option>
+                                    <option value="No">No</option>
+                                </select>
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-12 mt-2">
+                                <label for="drivingLicence">Do You Have Driving Licence
+                                    <span class="text-danger">*</span></label>
+                                <select id="drivingLicence" name="driving_licence" class="form-select" required="">
+                                    <option selected disabled value>Select Option</option>
+                                    <option value="Yes">Yes</option>
+                                    <option value="No">No</option>
+                                </select>
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-12 mt-2">
+                                <label for="relativeInBank">Any Relative Working In Bank?
+                                    <span class="text-danger">*</span></label>
+                                <select id="relativeInBank" name="Any Relative Working in HDFC bank (Yes / No)"
+                                    class="form-select" required="">
+                                    <option selected disabled value>Select Option</option>
+                                    <option value="Yes">Yes</option>
+                                    <option value="No">No</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <button class="btn btn-custom" type="submit" id="submit-button">
+                                Submit
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="loader" class="loader">
+        <div class="loader-content">
+            <div class="spinner"></div>
+            <p>Please Wait...</p>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
